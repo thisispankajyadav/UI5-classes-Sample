@@ -1,0 +1,41 @@
+<mvc:View controllerName="ui5Classes.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Label text="{person>/fullname}"/>
+					<Panel>
+					<Input value="{skill>/name}" ></Input>
+    <Input value="{skill>/value}" ></Input>
+    <Button text="Add skill" press="addSkill" ></Button>
+					</Panel>
+				<Table items="{person>/skills}">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Skills" level="H2"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+				<Column>
+						<Text text="Skill Name"/>
+					</Column>
+					<Column>
+						<Text text="Rating"/>
+					</Column>
+		</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{person>name}"/>
+							<Text text="{person>value}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+					
+				</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
